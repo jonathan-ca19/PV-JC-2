@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { SharedModule } from '../shared/shared.module';
+import { WebComponent } from './web.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,11 +13,18 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ProductComponent,
     CategoryComponent,
-    DashboardComponent
+    DashboardComponent,
+    WebComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
-  ]
+    SharedModule,
+    RouterModule
+  ],
+  exports: [
+  ProductComponent,
+  CategoryComponent,
+  DashboardComponent,
+  WebComponent]
 })
 export class WebModule { }
